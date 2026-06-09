@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 6600 4777"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="Thyssen_Logo.svg"
+   width="6600"
+   height="4777"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="780"
+     inkscape:window-height="480"
+     id="namedview6"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.034482759"
+     inkscape:cx="3312"
+     inkscape:cy="2391"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4" />
+  <path
+     d="M 3294,0 C 2480,0 1713,2300 1540,2964 h 750 c 220,-582 349,-874 581,-1182 104,-137 239,-276 423,-276 160,0 282,105 379,221 269,322 457,783 625,1237 h 748 C 4812,2093 4069,0 3294,0 m -22,3041 c -170,0 -413,36 -413,250 0,132 104,192 223,215 l 233,45 c 41,8 123,18 123,72 0,69 -109,78 -159,78 -78,0 -153,-23 -189,-95 l -269,8 c 10,220 259,264 442,264 179,0 456,-42 456,-269 0,-119 -86,-187 -197,-211 l -243,-51 c -41,-10 -140,-21 -140,-76 0,-54 80,-59 118,-59 68,0 146,4 173,73 l 273,-17 c -18,-205 -265,-227 -431,-227 z m 950,0 c -170,0 -413,36 -413,250 0,132 104,192 223,215 l 233,45 c 41,8 123,18 123,72 0,69 -109,78 -159,78 -78,0 -153,-23 -189,-95 l -269,8 c 10,220 259,264 442,264 179,0 456,-42 456,-269 0,-119 -86,-187 -197,-211 l -243,-51 c -41,-10 -140,-21 -140,-76 0,-54 80,-59 118,-59 68,0 146,4 173,73 l 273,-17 c -18,-205 -265,-227 -431,-227 M 0,3072 v 175 h 287 v 603 h 284 v -603 h 283 v -175 z m 902,0 v 778 h 284 v -296 h 354 v 296 h 284 v -778 h -284 v 280 h -354 v -280 z m 947,0 367,545 v 233 h 283 v -241 l 368,-537 h -1 -338 l -142,241 c -15,26 -24,53 -31,80 -5,-29 -13,-54 -28,-80 l -142,-241 z m 3851,0 v 778 h 284 v -409 l 371,409 h 245 v -778 h -284 v 410 l -372,-410 z m -959,1 v 777 h 863 v -176 h -570 v -122 h 513 v -186 h -513 v -119 h 560 v -174 z m -3445,858 -215,846 h 597 l 284,-846 z m 3351,0 291,846 h 621 l -223,-846 z"
+     id="path2"
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     inkscape:connector-curvature="0" />
+</svg>

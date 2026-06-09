@@ -286,36 +286,58 @@ img { max-width: 100%; height: auto; }
   flex: 0 0 auto;
 }
 
-/* Actor marks: small glyphs for the groups named in the text
-   (State, the clans, the union, Ruhrkohle AG). Each sits beside the
-   sentence that introduces its actor, so the symbol earns its place. */
-.actor {
+/* Logos: real marks of the organisations the text names, placed next
+   to the sentence that introduces each. A bordered card keeps the
+   trademark visually quoted, not endorsed. */
+.logo-row {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 0.75rem;
+  margin: 0 0 1.5rem;
 }
-.actor::before {
-  content: "";
-  flex: 0 0 auto;
-  width: 26px;
-  height: 26px;
-  margin-top: 0.15em;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain;
+.logo-card {
+  flex: 1 1 0;
+  min-width: 92px;
+  border: 1px solid var(--rule);
+  background: #fff;
+  padding: 0.85rem 0.7rem 0.6rem;
+  text-align: center;
 }
-.actor-state::before  { background-image: url("../images/symbols/mark-state.svg"); }
-.actor-clans::before  { background-image: url("../images/symbols/mark-clans.svg"); }
-.actor-union::before  { background-image: url("../images/symbols/mark-union.svg"); }
-
-/* The Ruhrkohle-AG consolidation mark: a centred, slightly larger plate
-   placed where the single company is formed. */
-.consolidation {
+.logo-card img {
   display: block;
-  width: 54px;
-  height: 54px;
-  margin: 0.5rem auto 1.5rem;
-  background: url("../images/symbols/mark-rag.svg") no-repeat center / contain;
+  width: 100%;
+  height: 42px;
+  object-fit: contain;
+}
+.logo-card figcaption {
+  margin-top: 0.55rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+/* A single logo shown inline as a contextual mark (e.g. Ruhrkohle AG) */
+.org-logo {
+  margin: 0 0 1.5rem;
+  border: 1px solid var(--rule);
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+.org-logo img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 70%;
+  height: 56px;
+  object-fit: contain;
+}
+.org-logo figcaption {
+  margin-top: 0.6rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
 }
 
 /* Small archival plates (cage texture, winding wheel) spread through the text */
@@ -455,6 +477,14 @@ img { max-width: 100%; height: auto; }
   .plate {
     float: left;
     width: 190px;
+    margin: 0.3rem 1.75rem 1rem 0;
+    clear: left;
+  }
+
+  /* A single org logo floats left as an inset card */
+  .org-logo {
+    float: left;
+    width: 220px;
     margin: 0.3rem 1.75rem 1rem 0;
     clear: left;
   }
