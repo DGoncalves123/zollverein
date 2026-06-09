@@ -13,11 +13,14 @@ images/figures/arendt.jpg                   | Walter Arendt, IG Bergbau, at an S
 images/figures/sohl-or-beitz.png            | Berthold Beitz (Krupp).                                            | Otto Steinert, CC BY-SA 2.5
 images/diagram-triangle.svg                 | The Triangle of Power, forced consolidation 1968-69.               | Original work, this project.
 images/symbols/detail.jpg                   | A headframe winding wheel against the Ruhr basin.                  | Karsten, CC BY-SA 3.0 DE
-images/symbols/lamp.jpg                     | A brass miner's safety lamp.                                       | Petra Klawikowski, CC BY-SA 3.0
 images/symbols/foerderkorb.jpg              | The perforated steel of a winding cage (Foerderkorb).              | Rasi57, CC BY-SA 3.0
-images/symbols/schlaegel-eisen.svg          | Schlaegel und Eisen, the mining emblem (used as a motif).          | Public domain
+images/symbols/schlaegel-eisen.svg          | Schlaegel und Eisen, the mining emblem (used as a section glyph).  | Public domain
+images/symbols/mark-state.svg               | Actor mark: the State / economics ministry (portico).             | Original work, this project.
+images/symbols/mark-clans.svg               | Actor mark: the Ruhr industrial dynasties (crown).                | Original work, this project.
+images/symbols/mark-union.svg               | Actor mark: the mineworkers' union (two figures).                 | Original work, this project.
+images/symbols/mark-rag.svg                 | Actor mark: many firms consolidated into one (Ruhrkohle AG).      | Original work, this project.
 
-# Note: the Karl Schiller portrait is sourced but not yet placed in the page
-# (sections currently use Arendt and Beitz). Drop it into section 2 if desired.
+# Actor marks sit beside the sentence that introduces each group (section 2),
+# and the consolidation mark sits where Ruhrkohle AG is formed (section 3).
 # Still un-sourced (optional document scans): § 8 GWB law text, a 1968/69 Ruhrkohle AG
 # press front page, a 1970s wage slip — see README for where to get these.

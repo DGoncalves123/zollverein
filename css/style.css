@@ -286,7 +286,39 @@ img { max-width: 100%; height: auto; }
   flex: 0 0 auto;
 }
 
-/* Small archival plates (lamp, cage texture, winding wheel) spread through the text */
+/* Actor marks: small glyphs for the groups named in the text
+   (State, the clans, the union, Ruhrkohle AG). Each sits beside the
+   sentence that introduces its actor, so the symbol earns its place. */
+.actor {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.actor::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  margin-top: 0.15em;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+.actor-state::before  { background-image: url("../images/symbols/mark-state.svg"); }
+.actor-clans::before  { background-image: url("../images/symbols/mark-clans.svg"); }
+.actor-union::before  { background-image: url("../images/symbols/mark-union.svg"); }
+
+/* The Ruhrkohle-AG consolidation mark: a centred, slightly larger plate
+   placed where the single company is formed. */
+.consolidation {
+  display: block;
+  width: 54px;
+  height: 54px;
+  margin: 0.5rem auto 1.5rem;
+  background: url("../images/symbols/mark-rag.svg") no-repeat center / contain;
+}
+
+/* Small archival plates (cage texture, winding wheel) spread through the text */
 .plate {
   margin: 0 0 1.4rem;
 }
