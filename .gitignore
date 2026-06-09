@@ -1,0 +1,4 @@
+# Stray browser cache dir created by the Chrome DevTools MCP
+${local_app_data}*
+.DS_Store
+__pycache__/

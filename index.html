@@ -2,14 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <!-- Served under https://<host>/zollverein/ — base path lets every asset resolve from zollverein/ -->
   <base href="/zollverein/">
   <title>The Zollverein Cartel — A Walking Route Through Evidence</title>
-  <meta name="description" content="A reconstruction of the Zollverein Cartel, grounded in the physical spaces of the Zeche Zollverein in Essen, now a UNESCO World Heritage site.">
+  <meta name="description" content="A grounded reconstruction of the consolidation of the Ruhr coal sector into Ruhrkohle AG (1969), walked through the spaces of the Zeche Zollverein in Essen, now a UNESCO World Heritage site.">
+  <meta name="theme-color" content="#2a2824">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- ============ STICKY WAYPOINT BAR (mobile-first) ============ -->
+  <div class="waybar" id="waybar">
+    <button class="waybar-toggle" id="routeToggle" aria-expanded="false" aria-controls="routeMenu">
+      <span class="waybar-route">Route</span>
+      <span class="waybar-here" id="waybarHere">Shaft XII</span>
+      <span class="waybar-caret" aria-hidden="true">▾</span>
+    </button>
+    <nav class="route-menu" id="routeMenu" aria-label="Jump to a location" hidden>
+      <ol>
+        <li><a href="#s1-winding-tower">1 · Shaft XII — Winding Tower</a></li>
+        <li><a href="#s2-coking-plant">2 · Central Coking Plant</a></li>
+        <li><a href="#s3-coal-washery">3 · Coal Washery — Ruhr Museum</a></li>
+        <li><a href="#s4-wage-hall">4 · The Wage Hall</a></li>
+        <li><a href="#s5-compressor-house">5 · Compressor House</a></li>
+        <li><a href="#s6-ring-railway">6 · The Ring Railway</a></li>
+        <li><a href="#coda-park">Coda · Zollverein Park Today</a></li>
+      </ol>
+    </nav>
+  </div>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header">
@@ -18,6 +39,7 @@
       <p class="kicker">Zeche Zollverein · Essen · UNESCO World Heritage Site</p>
       <h1>The Zollverein Cartel</h1>
       <p class="subtitle">A reconstruction, walked through the bricks and steel that made it material.</p>
+      <p class="scroll-hint" aria-hidden="true">Scroll to begin the route ↓</p>
     </div>
   </header>
 
@@ -26,133 +48,222 @@
     <!-- ============ SPATIAL FRAME ============ -->
     <section class="frame" aria-label="Method note">
       <p>
-        This reconstruction of the Zollverein Cartel moves through the physical spaces of the
-        Zeche Zollverein in Essen, now a UNESCO World Heritage site. Each section is grounded in a
-        specific building or structure of the former mine complex&nbsp;&mdash; the coking plant, the
-        wage hall, the winding tower&nbsp;&mdash; where the decisions described were made or felt.
-        The architecture is not a metaphor; it is the material shell of the processes under examination.
+        This reconstruction moves through the physical spaces of the Zeche Zollverein in
+        Essen, now a UNESCO World Heritage site. Each section is grounded in a specific
+        building of the former mine complex&nbsp;&mdash; the coking plant, the wage hall, the
+        winding tower&nbsp;&mdash; where the decisions described were made or felt. The
+        architecture is not a metaphor; it is the material shell of the processes under
+        examination.
       </p>
     </section>
 
     <!-- ============ SECTION 1 ============ -->
-    <section class="chapter" id="s1-winding-tower">
-      <p class="location-tag">Shaft XII &mdash; The Winding Tower</p>
-      <figure class="figure figure-left">
-        <img src="images/zollverein/shaft12-winding-tower.jpg"
-             alt="The double-bock headframe of Shaft XII at Zollverein"
-             onerror="this.onerror=null;this.src='images/placeholder.svg'">
-        <figcaption>Shaft XII headframe, the double-bock landmark visible across the complex. <span class="src">Source: TK</span></figcaption>
+    <section class="chapter" id="s1-winding-tower" data-here="Shaft XII">
+      <p class="location-tag">01 · Shaft XII — The Winding Tower</p>
+      <h2>The &ldquo;Zollverein Cartel&rdquo; Myth</h2>
+      <figure class="figure">
+        <img src="images/zollverein/shaft12-winding-tower.jpg" width="960" height="640" loading="lazy"
+             alt="The double-bock headframe of Shaft XII at Zollverein">
+        <figcaption>Shaft XII headframe, the double-bock landmark visible across the complex.
+          <span class="src">Photo: Anil Öztas, CC BY-SA 4.0.</span></figcaption>
       </figure>
-      <h2>Intro: The &ldquo;Zollverein Cartel&rdquo; Myth</h2>
-      <p class="body" data-placeholder>
-        [ Paste the introduction here. The symbolic heart of the complex announces the site and
-        anchors the story in the physical legacy of extraction. ]
+      <p>
+        &ldquo;The Zollverein Cartel&rdquo; is a misnomer worth taking apart. There was no single
+        spontaneous agreement between coal firms here; the name borrows the prestige of the old
+        Zollverein colliery&nbsp;&mdash; the carbonised heart of the Ruhr&nbsp;&mdash; to describe
+        something larger and more deliberate. The real subject is the organised consolidation of the
+        West German hard-coal sector, drawn together by the state into a single company,
+        <strong>Ruhrkohle AG</strong>, in 1969.
+      </p>
+      <p>
+        Read against the archive rather than the textbook story of &ldquo;market failure,&rdquo; the
+        episode looks less like an industry quietly succumbing to cheaper oil and more like a managed
+        restructuring of ownership, labour, and decline. The Shaft&nbsp;XII headframe, the most famous
+        silhouette in the Ruhr, is where that story is easiest to see whole.
       </p>
     </section>
 
     <!-- ============ SECTION 2 ============ -->
-    <section class="chapter" id="s2-coking-plant">
-      <p class="location-tag">Central Coking Plant</p>
-      <figure class="figure figure-right">
-        <img src="images/zollverein/coking-plant-ovens.jpg"
-             alt="The black steel oven batteries of the central coking plant"
-             onerror="this.onerror=null;this.src='images/placeholder.svg'">
-        <figcaption>Coke oven batteries. Coal was turned into coke here, the essential fuel for the steel industry. <span class="src">Source: TK</span></figcaption>
+    <section class="chapter" id="s2-coking-plant" data-here="Coking Plant">
+      <p class="location-tag">02 · Central Coking Plant</p>
+      <h2>Who Started It — The Triangle of Power</h2>
+      <figure class="figure">
+        <img src="images/zollverein/coking-plant-ovens.jpg" width="673" height="897" loading="lazy"
+             alt="The interconnected pipework of the coke oven batteries">
+        <figcaption>Coke oven batteries, where coal was cooked into the coke that fed the steel industry.
+          <span class="src">Photo: Stahlkocher, CC BY-SA 3.0.</span></figcaption>
       </figure>
-      <h2>Who Started It &mdash; The Triangle of Power</h2>
-      <p class="body" data-placeholder>
-        [ Paste the &ldquo;Who Started It&rdquo; section here. The furnace where state, capital, and
-        union aristocracy cooked the cartel. ]
+      <p>
+        The consolidation was not the work of one industrialist but of three converging interests.
+      </p>
+      <p>
+        <strong>The federal economics ministry.</strong> Under Economics Minister Karl Schiller (SPD),
+        the Grand Coalition pursued <em>Konzertierte Aktion</em>&nbsp;&mdash; coordinated steering of
+        industry, labour and the state&nbsp;&mdash; and used the &ldquo;rationalisation cartel&rdquo;
+        provisions of the competition law (<em>Gesetz gegen Wettbewerbsbeschränkungen</em>) to legalise
+        a concentration that pre-war decartelisation rules were meant to prevent.
+      </p>
+      <figure class="portrait">
+        <img src="images/figures/schiller.jpg" width="800" height="497" loading="lazy"
+             alt="Karl Schiller, Economics Minister, at a press conference">
+        <figcaption>Karl Schiller (SPD), Federal Economics Minister.
+          <span class="src">Bundesarchiv / Ludwig Wegmann, CC BY-SA 3.0 DE.</span></figcaption>
+      </figure>
+      <p>
+        <strong>The Ruhr industrial dynasties.</strong> The houses behind Thyssen, Krupp and the Haniel
+        line&nbsp;&mdash; figures such as Hans-Günther Sohl and Berthold Beitz&nbsp;&mdash; saw
+        competition eroding control of a shrinking sector and pressed for a compulsory combine that
+        would shift its losses onto the public budget.
+      </p>
+      <p>
+        <strong>The mineworkers&rsquo; union, IG Bergbau und Energie.</strong> Its leadership traded
+        militancy for security. The coking plant, where coal was cooked into the coke that fed the
+        steel industry, is the apt setting: this is where the three were fused.
       </p>
     </section>
 
     <!-- ============ SECTION 3 ============ -->
-    <section class="chapter" id="s3-coal-washery">
-      <p class="location-tag">Ruhr Museum Entrance &mdash; Former Coal Washing Plant</p>
-      <figure class="figure figure-left">
-        <img src="images/zollverein/coal-washery.jpg"
-             alt="The former coal washing plant, now the Ruhr Museum entrance"
-             onerror="this.onerror=null;this.src='images/placeholder.svg'">
-        <figcaption>The building where coal was sorted, cleaned, and concentrated. <span class="src">Source: TK</span></figcaption>
+    <section class="chapter" id="s3-coal-washery" data-here="Coal Washery">
+      <p class="location-tag">03 · Ruhr Museum Entrance — Former Coal Washery</p>
+      <h2>The Forced Amalgamation — Ruhrkohle AG, 1969</h2>
+      <figure class="figure">
+        <img src="images/zollverein/coal-washery.jpg" width="720" height="720" loading="lazy"
+             alt="The former coal washing plant, now the Ruhr Museum entrance">
+        <figcaption>The coal washery, now the Ruhr Museum entrance — where raw coal was sorted,
+          washed and concentrated. <span class="src">Photo: Tuxyso, CC BY-SA 4.0.</span></figcaption>
       </figure>
-      <h2>The Forced Amalgamation &mdash; Ruhrkohle AG, 1969</h2>
-      <p class="body" data-placeholder>
-        [ Paste the forced-amalgamation section here. The logic of consolidating 28 firms into one,
-        mirrored by the plant that sorted and concentrated coal. ]
+      <p>
+        The <em>Kohlekrise</em> had been building since 1958, as cheap fuel oil and imported American
+        coal undercut Ruhr pits. The state&rsquo;s answer was the 1968 coal-adjustment law and the
+        creation of Ruhrkohle AG, which absorbed some 26 mining companies&nbsp;&mdash; roughly
+        nine-tenths of Ruhr output&nbsp;&mdash; into one entity. Twenty-eight firms, give or take, became
+        a single state-backed monopoly buyer and seller.
+      </p>
+      <p>
+        The building that now houses the Ruhr Museum was the coal washery, where raw coal was sorted,
+        washed and concentrated before sale. The parallel is exact and unforced: the same logic that
+        graded and combined coal here was applied to the firms themselves, cleaned of competition and
+        concentrated into one manageable mass.
       </p>
     </section>
 
     <!-- ============ SECTION 4 ============ -->
-    <section class="chapter" id="s4-wage-hall">
-      <p class="location-tag">The Wage Hall (Lohnhalle)</p>
-      <figure class="figure figure-right">
-        <img src="images/zollverein/wage-hall.jpg"
-             alt="The miners' wage hall, where pay was distributed"
-             onerror="this.onerror=null;this.src='images/placeholder.svg'">
-        <figcaption>Where pay was distributed and the union&rsquo;s &ldquo;80% pay guarantee&rdquo; was physically received. <span class="src">Source: TK</span></figcaption>
-      </figure>
+    <section class="chapter" id="s4-wage-hall" data-here="Wage Hall">
+      <p class="location-tag">04 · The Wage Hall (Lohnhalle)</p>
       <h2>Labour Aristocracy as Pacification Corps</h2>
-      <p class="body" data-placeholder>
-        [ Paste the labour-aristocracy section here. The space of the managed pension and social
-        discipline. ]
+      <figure class="figure">
+        <img src="images/zollverein/wage-hall.jpg" width="724" height="560" loading="lazy"
+             alt="Miners in the wash-house at Zollverein">
+        <figcaption>Miners in the wash-house (Waschkaue), where pay was drawn and shifts changed.
+          <span class="src">Photo: Wikimedia Commons, CC BY-SA 4.0.</span></figcaption>
+      </figure>
+      <p>
+        Consolidation needed labour peace, and the union supplied it. Under Walter Arendt&nbsp;&mdash;
+        soon to become federal Labour Minister&nbsp;&mdash; IG Bergbau accepted the restructuring in
+        exchange for a generous <em>Sozialplan</em>: pay guarantees, retraining, and adjustment payments
+        (<em>Anpassungsgeld</em>) that let older miners leave the pits early on cushioned terms.
+      </p>
+      <figure class="portrait">
+        <img src="images/figures/arendt.jpg" width="800" height="497" loading="lazy"
+             alt="Walter Arendt speaking at an SPD party congress">
+        <figcaption>Walter Arendt, IG Bergbau, at an SPD party congress.
+          <span class="src">Bundesarchiv / Ludwig Wegmann, CC BY-SA 3.0 DE.</span></figcaption>
+      </figure>
+      <p>
+        Read critically, the deal converted a potentially explosive workforce into stakeholders in their
+        own managed decline; class conflict was absorbed into a pension schedule. The wash-house and wage
+        hall&nbsp;&mdash; where miners drew pay and changed for the shift&nbsp;&mdash; is where that
+        bargain was felt on the body, shift by shift. It was, on the documented record, one of the most
+        orderly industrial contractions in postwar Europe.
       </p>
     </section>
 
     <!-- ============ SECTION 5 ============ -->
-    <section class="chapter" id="s5-compressor-house">
-      <p class="location-tag">The Compressor House / Power Plant</p>
-      <figure class="figure figure-left">
-        <img src="images/zollverein/compressor-house.jpg"
-             alt="The compressor house that powered the mine"
-             onerror="this.onerror=null;this.src='images/placeholder.svg'">
-        <figcaption>Supplied the compressed air and electricity that ran the mine. <span class="src">Source: TK</span></figcaption>
+    <section class="chapter" id="s5-compressor-house" data-here="Compressor House">
+      <p class="location-tag">05 · The Compressor House / Power Plant</p>
+      <h2>Beneficiaries — Who the Concentration Served</h2>
+      <figure class="figure">
+        <img src="images/zollverein/compressor-house.jpg" width="720" height="480" loading="lazy"
+             alt="A row of valves and pressure gauges in the plant">
+        <figcaption>Valves and gauges of the plant that drove the works with compressed air and power.
+          <span class="src">Photo: GZagatta, CC BY-SA 4.0.</span></figcaption>
       </figure>
-      <h2>Beneficiaries &mdash; A Strategy of Tension</h2>
-      <p class="body" data-placeholder>
-        [ Paste the beneficiaries section here. A literal command center of energy, analogous to the
-        cartel&rsquo;s role in stabilizing the Cold War industrial order. ]
+      <p>
+        Consolidation was not about saving coal; it was about who absorbed its costs and who kept its
+        benefits. The steel makers&nbsp;&mdash; Thyssen, Krupp and their successors&nbsp;&mdash; secured a
+        guaranteed supply of subsidised coking coal, its price underwritten by the taxpayer, while they
+        redirected capital toward the export industries of <em>Modell Deutschland</em>: cars, chemicals,
+        machinery.
+      </p>
+      <figure class="portrait">
+        <img src="images/figures/sohl-or-beitz.png" width="244" height="340" loading="lazy"
+             alt="Portrait of Berthold Beitz of Krupp">
+        <figcaption>Berthold Beitz (Krupp), one of the dynastic figures behind consolidation.
+          <span class="src">Photo: Otto Steinert, CC BY-SA 2.5.</span></figcaption>
+      </figure>
+      <p>
+        Ruhrkohle AG became the vessel into which the losses of a dying sector were poured, even as the
+        same firms kept the profitable downstream business. The compressor house&nbsp;&mdash; which
+        supplied the compressed air and power that drove the whole works&nbsp;&mdash; is a fair emblem: a
+        central plant that kept the system running while the value flowed outward to its owners.
       </p>
     </section>
 
     <!-- ============ SECTION 6 ============ -->
-    <section class="chapter" id="s6-ring-railway">
-      <p class="location-tag">The &ldquo;Ring&rdquo; Railway &mdash; The Perimeter</p>
-      <figure class="figure figure-right">
-        <img src="images/zollverein/ring-railway.jpg"
-             alt="The loop railway that circled the Zollverein site"
-             onerror="this.onerror=null;this.src='images/placeholder.svg'">
-        <figcaption>The loop line that circled the site &mdash; a ready-made image of enclosure. <span class="src">Source: TK</span></figcaption>
+    <section class="chapter" id="s6-ring-railway" data-here="Ring Railway">
+      <p class="location-tag">06 · The &ldquo;Ring&rdquo; Railway — The Perimeter</p>
+      <h2>Aftermath</h2>
+      <figure class="figure">
+        <img src="images/zollverein/ring-railway.jpg" width="724" height="535" loading="lazy"
+             alt="Historical oblique aerial showing the rail network around the colliery">
+        <figcaption>The colliery and its rail network — the closed industrial world that moved coal and men.
+          <span class="src">Photo: Regionalverband Ruhr, Essen, CC BY-SA 3.0 DE.</span></figcaption>
       </figure>
-      <h2>The Panopticon and Aftermath</h2>
-      <p class="body" data-placeholder>
-        [ Paste the closing section here. The open-air panopticon finds its physical expression in the
-        perimeter that once controlled movement in and out. ]
+      <p>
+        What followed was decades of orchestrated shrinkage. Pit after pit closed on schedule, financed
+        by subsidy and adjustment payments, until the last German hard-coal mine&nbsp;&mdash;
+        Prosper-Haniel&nbsp;&mdash; wound down in December 2018. Zollverein itself stopped mining in 1986
+        and its coking plant in 1993.
+      </p>
+      <p>
+        The loop railway that once circled the site, moving coal and men within a closed industrial
+        world, is now a quiet line through a monument. The perimeter that defined the working complex
+        still reads as an edge&nbsp;&mdash; but it now encloses memory rather than production. The decline
+        was real; the point is that it was administered, not merely suffered.
       </p>
     </section>
 
     <!-- ============ DIAGRAM ============ -->
     <section class="diagram-section" aria-label="Explanatory diagram">
       <figure class="figure figure-full">
-        <img src="images/diagram-triangle.svg"
-             alt="Diagram: the Triangle of Power converging on Ruhrkohle AG, 1969">
-        <figcaption>
-          The Triangle of Power &mdash; the forced consolidation of the Ruhr coal sector, 1968&ndash;69.
-        </figcaption>
+        <img src="images/diagram-triangle.svg" width="900" height="620" loading="lazy"
+             alt="Diagram: the Triangle of Power — State, Monopoly Capital and Union Aristocracy converging on Ruhrkohle AG, 1969">
+        <figcaption>The Triangle of Power &mdash; the forced consolidation of the Ruhr coal sector,
+          1968&ndash;69.</figcaption>
       </figure>
     </section>
 
     <!-- ============ CODA / EVENT ============ -->
-    <section class="chapter coda" id="coda-park">
-      <p class="location-tag">Zollverein Park &mdash; Today</p>
+    <section class="chapter coda" id="coda-park" data-here="Today">
+      <p class="location-tag">Coda · Zollverein Park — Today</p>
       <h2>Where the Command Once Hummed</h2>
-      <p class="body" data-placeholder>
-        [ A calm, factual sentence about what stands today where the cartel&rsquo;s command once hummed. ]
+      <figure class="figure">
+        <img src="images/zollverein/aerial-complex.jpg" width="480" height="340" loading="lazy"
+             alt="Aerial view of the Zollverein complex today">
+        <figcaption>The Zollverein complex today: monument, museum, and park.
+          <span class="src">Photo: Tuxyso, CC BY-SA 3.0.</span></figcaption>
+      </figure>
+      <p>
+        The colliery closed in 1986 and was inscribed as a UNESCO World Heritage Site in 2001. Where the
+        command of a coal monopoly once hummed, there is now a public park, a museum, and a design
+        campus&nbsp;&mdash; the machinery preserved, the argument it embodied left for visitors to read.
+        This event takes place in that landscape.
       </p>
       <div class="event-card">
         <p class="event-label">Event</p>
         <p class="event-title">[ Event name ]</p>
-        <p class="event-meta">[ Date ] &middot; [ Time ] &middot; Zollverein Park, Essen</p>
-        <p><a href="#" class="event-link">Event details &amp; tickets &rarr;</a></p>
+        <p class="event-meta">[ Date ] · [ Time ] · Zollverein Park, Essen</p>
+        <p><a href="#" class="event-link">Event details &amp; tickets →</a></p>
       </div>
     </section>
 
@@ -162,16 +273,22 @@
   <footer class="site-footer">
     <p class="credits-heading">Image credits</p>
     <ul class="credits">
-      <li>Shaft XII winding tower &mdash; [ photographer / archive, date, license ]</li>
-      <li>Central coking plant &mdash; [ photographer / archive, date, license ]</li>
-      <li>Coal washing plant (Ruhr Museum entrance) &mdash; [ photographer / archive, date, license ]</li>
-      <li>Wage hall (Lohnhalle) &mdash; [ photographer / archive, date, license ]</li>
-      <li>Compressor house &mdash; [ photographer / archive, date, license ]</li>
-      <li>Ring railway &mdash; [ photographer / archive, date, license ]</li>
-      <li>Triangle of Power diagram &mdash; original work, this project.</li>
+      <li>Shaft XII winding tower — Anil Öztas, CC BY-SA 4.0 (Wikimedia Commons).</li>
+      <li>Central coking plant — Stahlkocher, CC BY-SA 3.0 (Wikimedia Commons).</li>
+      <li>Coal washery / Ruhr Museum — Tuxyso, CC BY-SA 4.0 (Wikimedia Commons).</li>
+      <li>Wash-house (miners) — Wikimedia Commons, CC BY-SA 4.0.</li>
+      <li>Compressor-house valves — GZagatta, CC BY-SA 4.0 (Wikimedia Commons).</li>
+      <li>Colliery rail network (oblique aerial) — Regionalverband Ruhr, Essen, CC BY-SA 3.0 DE.</li>
+      <li>Karl Schiller — Bundesarchiv / Ludwig Wegmann, CC BY-SA 3.0 DE.</li>
+      <li>Walter Arendt — Bundesarchiv / Ludwig Wegmann, CC BY-SA 3.0 DE.</li>
+      <li>Berthold Beitz — Otto Steinert, CC BY-SA 2.5 (Wikimedia Commons).</li>
+      <li>Aerial of complex — Tuxyso, CC BY-SA 3.0 (Wikimedia Commons).</li>
+      <li>Triangle of Power diagram — original work, this project.</li>
     </ul>
-    <p class="colophon">A report-form companion to the event at the Zeche Zollverein, Essen.</p>
+    <p class="colophon">A report-form companion to the event at the Zeche Zollverein, Essen.
+      Text is a grounded-history draft for revision.</p>
   </footer>
 
+  <script src="js/route.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 /* ============================================================
-   The Zollverein Cartel — report-form, archival aesthetic.
+   The Zollverein Cartel — mobile-first, report aesthetic.
+   Baseline: single column for a phone. Wider screens are a
+   progressive enhancement layered on at min-width breakpoints.
    Light background, dark text, muted images, thin grey borders.
    ============================================================ */
 
@@ -11,22 +13,100 @@
   --rule:       #c9c5bb;
   --rule-soft:  #e0ddd4;
   --accent:     #6b6353;
-  --maxw:       780px;
+  --maxw:       720px;
+  --bar-h:      48px;
+  --pad:        1.25rem;       /* base side padding on a phone */
 }
 
 * { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  /* Anchored jumps clear the sticky bar */
+  scroll-padding-top: calc(var(--bar-h) + 0.5rem);
+}
 
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.6;
+  /* Fluid base type: comfortable on a phone, capped on desktop */
+  font-size: clamp(17px, 4.4vw, 19px);
+  line-height: 1.62;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+img { max-width: 100%; height: auto; }
+
+/* ---------- Sticky waypoint bar (mobile-first) ---------- */
+.waybar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(42, 40, 36, 0.97);
+  color: var(--paper-pure);
+  border-bottom: 1px solid #000;
+  padding-top: env(safe-area-inset-top);
+}
+.waybar-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  min-height: var(--bar-h);
+  margin: 0;
+  padding: 0 var(--pad);
+  background: none;
+  border: 0;
+  color: inherit;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.waybar-route {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  color: #b3ac9d;
+}
+.waybar-here {
+  flex: 1;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.waybar-caret { color: #b3ac9d; font-size: 0.7rem; }
+.waybar-toggle[aria-expanded="true"] .waybar-caret { transform: rotate(180deg); }
+
+.route-menu {
+  border-top: 1px solid #4a4640;
+  background: rgba(36, 34, 30, 0.99);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.route-menu ol {
+  margin: 0;
+  padding: 0.4rem 0;
+  list-style: none;
+}
+.route-menu a {
+  display: block;
+  padding: 0.85rem var(--pad);          /* generous tap target */
+  color: #e7e3d8;
+  text-decoration: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #3a3731;
+}
+.route-menu li:last-child a { border-bottom: 0; }
+.route-menu a:active { background: #4a4640; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -48,89 +128,97 @@ body {
   position: relative;
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 5.5rem 1.5rem 4.5rem;
+  padding: 3.5rem var(--pad) 3rem;
   color: var(--paper-pure);
 }
 .kicker {
-  margin: 0 0 1rem;
+  margin: 0 0 0.9rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #cfcabd;
+  line-height: 1.5;
 }
 .site-header h1 {
   margin: 0;
-  font-size: 2.9rem;
+  font-size: clamp(2.1rem, 9vw, 3rem);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.01em;
 }
 .subtitle {
-  margin: 1rem 0 0;
-  font-size: 1.15rem;
+  margin: 0.9rem 0 0;
+  font-size: clamp(1.02rem, 4.5vw, 1.15rem);
   font-style: italic;
   color: #d8d3c7;
-  max-width: 32em;
+  max-width: 30em;
+}
+.scroll-hint {
+  margin: 2rem 0 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a7a191;
 }
 
 /* ---------- Layout primitives ---------- */
-main { display: block; }
-
 .frame,
 .chapter,
 .diagram-section {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
 }
 
 /* ---------- Spatial frame note ---------- */
 .frame {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
 }
 .frame p {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-style: italic;
   color: var(--ink-soft);
   border-left: 3px solid var(--rule);
-  padding-left: 1.5rem;
+  padding-left: 1.1rem;
 }
 
 /* ---------- Chapters ---------- */
 .chapter {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
   border-top: 1px solid var(--rule-soft);
 }
 .location-tag {
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.6rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.74rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--accent);
+  line-height: 1.5;
 }
 .chapter h2 {
-  margin: 0 0 1rem;
-  font-size: 1.6rem;
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.4rem, 6vw, 1.7rem);
   font-weight: 600;
   line-height: 1.2;
 }
-.body { margin: 0 0 1rem; }
+.chapter p { margin: 0 0 1rem; }
+.chapter p:last-child { margin-bottom: 0; }
+.chapter strong { font-weight: 600; }
 
-/* Placeholder copy looks like an editorial slug, not finished text */
-[data-placeholder] {
-  color: #8a8578;
-  font-style: italic;
-}
+/* Placeholder-style brackets in the event card read as editorial slugs */
+.event-title, .event-meta { font-style: normal; }
 
-/* ---------- Figures ---------- */
+/* ---------- Figures (stacked, full-width on mobile) ---------- */
 .figure {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.4rem;
 }
 .figure img {
   display: block;
@@ -138,98 +226,101 @@ main { display: block; }
   height: auto;
   border: 1px solid var(--rule);
   background: var(--paper-pure);
-  filter: grayscale(35%);
+  filter: grayscale(30%);
 }
-.figure figcaption {
+.figure figcaption,
+.portrait figcaption {
   margin-top: 0.5rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   line-height: 1.45;
   color: var(--ink-soft);
 }
-.figure .src { color: #9a9486; }
+.figure .src, .portrait .src { color: #9a9486; }
 
-/* Float figures on wider screens for a report feel */
-@media (min-width: 680px) {
-  .figure-left,
-  .figure-right {
-    width: 44%;
-    margin-bottom: 0.5rem;
-  }
-  .figure-left  { float: left;  margin-right: 1.75rem; }
-  .figure-right { float: right; margin-left: 1.75rem; }
-  .chapter::after { content: ""; display: block; clear: both; }
+/* Portraits sit inline within a section, smaller, centred */
+.portrait {
+  margin: 0 auto 1.4rem;
+  max-width: 260px;
+  text-align: center;
 }
-
-.figure-full { width: 100%; }
+.portrait img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--rule);
+  filter: grayscale(60%);
+}
 
 /* ---------- Diagram ---------- */
 .diagram-section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
   border-top: 1px solid var(--rule-soft);
 }
 .diagram-section .figure img {
   filter: none;
-  padding: 1rem;
+  padding: 0.5rem;
+  background: var(--paper-pure);
 }
 
 /* ---------- Coda / event ---------- */
 .coda h2 { font-style: normal; }
 .event-card {
-  margin-top: 2rem;
+  margin-top: 1.75rem;
   border: 1px solid var(--rule);
   background: var(--paper-pure);
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 .event-label {
   margin: 0 0 0.5rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent);
 }
 .event-title {
   margin: 0 0 0.25rem;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 .event-meta {
   margin: 0 0 1rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--ink-soft);
 }
 .event-link {
+  display: inline-block;
+  min-height: 44px;             /* tap target */
+  line-height: 44px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 0.92rem;
   color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid var(--accent);
-  padding-bottom: 1px;
 }
-.event-link:hover { color: var(--accent); }
+.event-link:active { color: var(--accent); }
 
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--rule);
   background: var(--paper-pure);
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .site-footer > * {
   max-width: var(--maxw);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
 }
 .credits-heading {
-  padding-top: 2.5rem;
+  padding-top: 2rem;
   margin: 0 0 0.75rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -237,14 +328,49 @@ main { display: block; }
   margin: 0;
   padding-left: 1.1rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   line-height: 1.7;
   color: var(--ink-soft);
 }
 .colophon {
-  padding-top: 1.5rem;
-  padding-bottom: 2.5rem;
-  font-size: 0.85rem;
+  padding-top: 1.25rem;
+  padding-bottom: calc(2.5rem + env(safe-area-inset-bottom));
+  font-size: 0.82rem;
   font-style: italic;
   color: #8a8578;
+}
+
+/* ============================================================
+   PROGRESSIVE ENHANCEMENT — tablet and up
+   ============================================================ */
+@media (min-width: 600px) {
+  :root { --pad: 1.75rem; }
+
+  .header-inner { padding-top: 5rem; padding-bottom: 4rem; }
+  .frame, .chapter, .diagram-section { padding-top: 3rem; padding-bottom: 3rem; }
+
+  /* Float the lead figure beside the prose, report-style */
+  .chapter .figure:first-of-type {
+    float: right;
+    width: 46%;
+    margin: 0.3rem 0 1rem 1.75rem;
+  }
+  .chapter::after { content: ""; display: block; clear: both; }
+
+  /* Portraits float to the left as inset plates */
+  .portrait {
+    float: left;
+    width: 200px;
+    margin: 0.3rem 1.75rem 1rem 0;
+  }
+}
+
+@media (min-width: 900px) {
+  :root { --maxw: 820px; }
+  body { line-height: 1.66; }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
