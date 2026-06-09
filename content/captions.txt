@@ -12,6 +12,10 @@ images/figures/schiller.jpg                 | Karl Schiller, Economics Minister,
 images/figures/arendt.jpg                   | Walter Arendt, IG Bergbau, at an SPD party congress.               | Bundesarchiv / Ludwig Wegmann, CC BY-SA 3.0 DE
 images/figures/sohl-or-beitz.png            | Berthold Beitz (Krupp).                                            | Otto Steinert, CC BY-SA 2.5
 images/diagram-triangle.svg                 | The Triangle of Power, forced consolidation 1968-69.               | Original work, this project.
+images/symbols/detail.jpg                   | A headframe winding wheel against the Ruhr basin.                  | Karsten, CC BY-SA 3.0 DE
+images/symbols/lamp.jpg                     | A brass miner's safety lamp.                                       | Petra Klawikowski, CC BY-SA 3.0
+images/symbols/foerderkorb.jpg              | The perforated steel of a winding cage (Foerderkorb).              | Rasi57, CC BY-SA 3.0
+images/symbols/schlaegel-eisen.svg          | Schlaegel und Eisen, the mining emblem (used as a motif).          | Public domain
 
 # Note: the Karl Schiller portrait is sourced but not yet placed in the page
 # (sections currently use Arendt and Beitz). Drop it into section 2 if desired.

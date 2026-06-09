@@ -46,7 +46,7 @@ img { max-width: 100%; height: auto; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(42, 40, 36, 0.97);
+  background: #2a2824;
   color: var(--paper-pure);
   border-bottom: 1px solid #000;
   padding-top: env(safe-area-inset-top);
@@ -251,6 +251,61 @@ img { max-width: 100%; height: auto; }
   filter: grayscale(60%);
 }
 
+/* ---------- Paraphernalia: the crossed-hammer emblem as a motif ---------- */
+/* A small Schlägel-und-Eisen mark used as a section glyph and divider. */
+.glyph {
+  display: block;
+  width: 30px;
+  height: 26px;
+  margin: 0 0 1rem;
+  background: url("../images/symbols/schlaegel-eisen.svg") no-repeat center / contain;
+  opacity: 0.5;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 0.5rem auto 2.5rem;
+  max-width: var(--maxw);
+  padding: 0 var(--pad);
+  color: var(--rule);
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+.divider .mark {
+  width: 26px;
+  height: 22px;
+  background: url("../images/symbols/schlaegel-eisen.svg") no-repeat center / contain;
+  opacity: 0.55;
+  flex: 0 0 auto;
+}
+
+/* Small archival plates (lamp, cage texture, winding wheel) spread through the text */
+.plate {
+  margin: 0 0 1.4rem;
+}
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  filter: grayscale(45%) contrast(0.96);
+}
+.plate figcaption {
+  margin-top: 0.5rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.plate .src { color: #9a9486; }
+
 /* ---------- Diagram ---------- */
 .diagram-section {
   padding-top: 2.25rem;
@@ -362,6 +417,14 @@ img { max-width: 100%; height: auto; }
     float: left;
     width: 200px;
     margin: 0.3rem 1.75rem 1rem 0;
+  }
+
+  /* Small paraphernalia plates float left, inset into the prose */
+  .plate {
+    float: left;
+    width: 190px;
+    margin: 0.3rem 1.75rem 1rem 0;
+    clear: left;
   }
 }
 
