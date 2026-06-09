@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Archival photo placeholder">
+  <rect width="800" height="560" fill="#e6e3da"/>
+  <g fill="none" stroke="#b8b3a7" stroke-width="2">
+    <rect x="20" y="20" width="760" height="520"/>
+    <line x1="20" y1="20" x2="780" y2="540"/>
+    <line x1="780" y1="20" x2="20" y2="540"/>
+  </g>
+  <rect x="250" y="245" width="300" height="70" fill="#e6e3da"/>
+  <text x="400" y="290" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="22" letter-spacing="3" fill="#8a8578">ARCHIVAL PHOTO &#8212; TK</text>
+</svg>

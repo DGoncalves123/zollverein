@@ -1,0 +1,17 @@
+# filename | caption | source (date, photographer/archive, license)
+# Keep captions strictly factual. Fill the source column before publishing.
+
+images/zollverein/aerial-complex.jpg        | Aerial view of the Zollverein complex, ca. 1960s.                          | TK
+images/zollverein/shaft12-winding-tower.jpg | Shaft XII headframe, the double-bock landmark.                             | TK
+images/zollverein/coking-plant-ovens.jpg    | Coke oven batteries of the central coking plant, in operation.            | TK
+images/zollverein/coal-washery.jpg          | The coal washing plant, now the Ruhr Museum entrance.                     | TK
+images/zollverein/wage-hall.jpg             | The miners' wage hall (Lohnhalle).                                        | TK
+images/zollverein/compressor-house.jpg      | The compressor house / power plant.                                       | TK
+images/zollverein/ring-railway.jpg          | The loop railway that circled the site.                                   | TK
+images/figures/schiller.jpg                 | Karl Schiller, Federal Economics Minister, 1960s.                         | Bundesarchiv (verify license)
+images/figures/sohl-or-beitz.jpg            | Hans-Günther Sohl (Thyssen) / Berthold Beitz (Krupp).                     | TK
+images/figures/arendt.jpg                   | Walter Arendt, IG Bergbau.                                                | Bundesarchiv (verify license)
+images/documents/gwb-paragraph.jpg          | Gesetz gegen Wettbewerbsbeschränkungen, § 8 (1960s rationalization cartel).| gesetze-im-internet.de / Bundestag archive
+images/documents/ruhrkohle-1969-press.jpg   | Front page covering the Ruhrkohle AG formation, 1968/69.                  | Der Spiegel / Die Zeit / WAZ archive
+images/documents/wage-slip.jpg              | Miner's wage slip / social-plan document, 1970s.                          | montan.dok, Deutsches Bergbau-Museum Bochum
+images/diagram-triangle.svg                 | The Triangle of Power, forced consolidation 1968–69.                      | Original work, this project.

@@ -1,0 +1,250 @@
+/* ============================================================
+   The Zollverein Cartel — report-form, archival aesthetic.
+   Light background, dark text, muted images, thin grey borders.
+   ============================================================ */
+
+:root {
+  --ink:        #1d1d1b;
+  --ink-soft:   #44423d;
+  --paper:      #f4f2ec;
+  --paper-pure: #fbfaf6;
+  --rule:       #c9c5bb;
+  --rule-soft:  #e0ddd4;
+  --accent:     #6b6353;
+  --maxw:       780px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+  background: #2a2824;
+}
+.header-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/zollverein/aerial-complex.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(0.9);
+  opacity: 0.22;
+}
+.header-inner {
+  position: relative;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem 4.5rem;
+  color: var(--paper-pure);
+}
+.kicker {
+  margin: 0 0 1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #cfcabd;
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 2.9rem;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.subtitle {
+  margin: 1rem 0 0;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #d8d3c7;
+  max-width: 32em;
+}
+
+/* ---------- Layout primitives ---------- */
+main { display: block; }
+
+.frame,
+.chapter,
+.diagram-section {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Spatial frame note ---------- */
+.frame {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.frame p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  border-left: 3px solid var(--rule);
+  padding-left: 1.5rem;
+}
+
+/* ---------- Chapters ---------- */
+.chapter {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid var(--rule-soft);
+}
+.location-tag {
+  margin: 0 0 1.5rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.chapter h2 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.body { margin: 0 0 1rem; }
+
+/* Placeholder copy looks like an editorial slug, not finished text */
+[data-placeholder] {
+  color: #8a8578;
+  font-style: italic;
+}
+
+/* ---------- Figures ---------- */
+.figure {
+  margin: 0 0 1.5rem;
+}
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  background: var(--paper-pure);
+  filter: grayscale(35%);
+}
+.figure figcaption {
+  margin-top: 0.5rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.figure .src { color: #9a9486; }
+
+/* Float figures on wider screens for a report feel */
+@media (min-width: 680px) {
+  .figure-left,
+  .figure-right {
+    width: 44%;
+    margin-bottom: 0.5rem;
+  }
+  .figure-left  { float: left;  margin-right: 1.75rem; }
+  .figure-right { float: right; margin-left: 1.75rem; }
+  .chapter::after { content: ""; display: block; clear: both; }
+}
+
+.figure-full { width: 100%; }
+
+/* ---------- Diagram ---------- */
+.diagram-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid var(--rule-soft);
+}
+.diagram-section .figure img {
+  filter: none;
+  padding: 1rem;
+}
+
+/* ---------- Coda / event ---------- */
+.coda h2 { font-style: normal; }
+.event-card {
+  margin-top: 2rem;
+  border: 1px solid var(--rule);
+  background: var(--paper-pure);
+  padding: 1.5rem;
+}
+.event-label {
+  margin: 0 0 0.5rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.event-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.event-meta {
+  margin: 0 0 1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.event-link {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.92rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+}
+.event-link:hover { color: var(--accent); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  background: var(--paper-pure);
+  margin-top: 2rem;
+}
+.site-footer > * {
+  max-width: var(--maxw);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.credits-heading {
+  padding-top: 2.5rem;
+  margin: 0 0 0.75rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.credits {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.colophon {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #8a8578;
+}

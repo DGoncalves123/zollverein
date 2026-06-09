@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img"
+     aria-label="The Triangle of Power: State, Monopoly Capital, and Union Aristocracy converging on Ruhrkohle AG, 1969">
+  <style>
+    .box   { fill: #fbfaf6; stroke: #1d1d1b; stroke-width: 1.5; }
+    .hub    { fill: #ece9e0; stroke: #1d1d1b; stroke-width: 1.5; }
+    .ttl    { font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700;
+              font-size: 17px; fill: #1d1d1b; }
+    .lbl    { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 14px; fill: #44423d; }
+    .hubttl { font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700;
+              font-size: 18px; fill: #1d1d1b; }
+    .hubsub { font-family: "Helvetica Neue", Arial, sans-serif; font-style: italic;
+              font-size: 14px; fill: #44423d; }
+    .conn   { stroke: #6b6353; stroke-width: 1.5; fill: none; }
+    .cap    { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12px;
+              letter-spacing: 2px; fill: #6b6353; }
+  </style>
+
+  <rect width="900" height="620" fill="#f4f2ec"/>
+  <text x="450" y="44" text-anchor="middle" class="cap">THE TRIANGLE OF POWER &#8212; 1968&#8211;69</text>
+
+  <!-- connectors (drawn first, beneath boxes) -->
+  <line class="conn" x1="200" y1="170" x2="450" y2="430"/>
+  <line class="conn" x1="700" y1="170" x2="450" y2="430"/>
+  <line class="conn" x1="450" y1="230" x2="450" y2="430"/>
+
+  <!-- Box 1: State -->
+  <rect class="box" x="60" y="95" width="280" height="92"/>
+  <text x="200" y="128" text-anchor="middle" class="ttl">State</text>
+  <text x="200" y="152" text-anchor="middle" class="lbl">Economics Minister Schiller</text>
+  <text x="200" y="172" text-anchor="middle" class="lbl">BND &#183; Verfassungsschutz</text>
+
+  <!-- Box 2: Monopoly Capital -->
+  <rect class="box" x="560" y="95" width="280" height="92"/>
+  <text x="700" y="128" text-anchor="middle" class="ttl">Monopoly Capital</text>
+  <text x="700" y="152" text-anchor="middle" class="lbl">Thyssen &#183; Krupp</text>
+  <text x="700" y="172" text-anchor="middle" class="lbl">Haniel heirs</text>
+
+  <!-- Box 3: Union Aristocracy -->
+  <rect class="box" x="310" y="138" width="280" height="92"/>
+  <text x="450" y="171" text-anchor="middle" class="ttl">Union Aristocracy</text>
+  <text x="450" y="195" text-anchor="middle" class="lbl">IG Bergbau</text>
+  <text x="450" y="215" text-anchor="middle" class="lbl">(Walter Arendt)</text>
+
+  <!-- Central hub -->
+  <circle class="hub" cx="450" cy="500" r="92"/>
+  <text x="450" y="486" text-anchor="middle" class="hubttl">Ruhrkohle AG</text>
+  <text x="450" y="508" text-anchor="middle" class="hubttl">1969</text>
+  <text x="450" y="532" text-anchor="middle" class="hubsub">A compulsory</text>
+  <text x="450" y="550" text-anchor="middle" class="hubsub">rationalization cartel</text>
+</svg>
